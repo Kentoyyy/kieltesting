@@ -1,165 +1,220 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #000;
-    
-    color: #fff;
-  }
-  
-  .navbar {
-    background-color: transparent;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar .logo h1 {
-    color: #fff;
-    margin: 10px;
-  }
-  
-  .nav-links {
-    list-style-type: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo h1 {
+  color: #fff;
+  margin: 10px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #000;
+  min-height: 90vh;
+  flex-wrap: wrap; /* Allow content to wrap on small screens */
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Enable flex items to wrap on smaller screens */
+  width: 100%;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 500px; /* Limit max width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin: 0 auto; /* Center image on small screens */
+}
+
+.hero-text {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center text on smaller screens */
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-text .name {
+  font-size: 48px;
+  color: #d32f2f;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.about, .projects, .contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2, .projects h2, .contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.projects .project-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow projects to wrap on small screens */
+}
+
+.projects .project-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form input, .contact form textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact form button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Scroll down section */
+.scroll-down {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.scroll-down p {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
   .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #000; /* Update to black for minimalist dark theme */
-    min-height: 90vh;
+      flex-direction: column; /* Stack text and image on top of each other */
+      text-align: center;
   }
-  
-  .hero-content {
-    display: flex;
-    align-items: center;
-  }
-  
+
   .profile-pic {
-    width: 500px; /* Make it fill its container */
-    height: 500px;
-    border-radius: 10px;
-     margin-left: -300px;
-     /* Rounded corners */
+      width: 80%; /* Scale down image on tablets */
+      margin: 0 auto;
   }
-  
+
   .hero-text {
-    max-width: 50%; /* Adjust the width to balance with image */
+      max-width: 100%; /* Full width for text on smaller screens */
   }
-  
+
   .hero-text h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    margin-left: 120px;
+      font-size: 28px; /* Adjust font size for smaller screens */
   }
-  
+
   .hero-text .name {
-    font-size: 48px;
-    color: #d32f2f; /* Red color for name to stand out */
+      font-size: 36px;
   }
-  
+
   .hero-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    margin-left: 120px;
+      font-size: 16px;
   }
-  
+
   .social-icons a img {
-    width: 30px;
-    margin: 0 10px;
-    margin-left: 120px;
+      width: 25px;
   }
-  
-  .about, .projects, .contact {
-    padding: 50px 20px;
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+      font-size: 24px; /* Further reduce font size for mobile devices */
   }
-  
-  .about h2, .projects h2, .contact h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+
+  .hero-text .name {
+      font-size: 28px;
   }
-  
-  .projects .project-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+
+  .hero-text p {
+      font-size: 14px;
   }
-  
-  .projects .project-item {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 200px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    color: black;
+
+  .profile-pic {
+      width: 100%; /* Full width on small phones */
+      height: auto;
   }
-  
-  .contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .contact form input, .contact form textarea {
-    width: 300px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .contact form button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .contact form button:hover {
-    background-color: #0056b3;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Scroll down section */
-  .scroll-down {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .scroll-down p {
-    font-size: 16px;
-    color: #fff;
-  }
-  
+}
