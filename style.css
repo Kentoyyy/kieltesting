@@ -229,17 +229,10 @@ span{
         content: "Student";
     }
     21%, 40%{
-        content: "Jehova Witnesess";
+        content: "Jehovah's Witnesses";
     }
-    41%, 60%{
-        content: "2nd year in BSU - Balayan";
-    }
-    61%, 80%{
-        content: "Editor";
-    }
-    81%, 100%{
-        content: "creating DIY project";
-    }
+   
+    
 }
 
 @media (max-width: 1000px){
